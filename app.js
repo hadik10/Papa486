@@ -30,18 +30,18 @@ async function cxnDB(){
 
 
 app.get('/', (req, res) => {
-  res.send('Hello World This is Hardik! <br/> <a href="mongo">mongo</a>');
+  res.send('Hello World, This is Agile Full-Stack Developer! <br/> <a href="mongo">MongoDB</a>');
 })
 
 app.get('/mongo', async (req, res) => {
 
-  // res.send("check your node console, bro");
+   res.send("MongoDB is rolling, hgupta");
 
   let result = await cxnDB().catch(console.error); 
 
   console.log('in get to slash mongo', result[1].drink_name); 
 
-  res.send(`here ya go, joe. ${ result[1].drink_name }` ); 
+  //res.send(`here ya go, joe. ${ result[1].drink_name }` ); 
 
 })
 
