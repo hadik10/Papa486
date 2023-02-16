@@ -30,7 +30,7 @@ async function cxnDB(){
 
 
 app.get('/', (req, res) => {
-  res.send('Hello World This is Barry 3! <br/> <a href="mongo">mongo</a>');
+  res.send('Hello World This is Hardik! <br/> <a href="mongo">mongo</a>');
 })
 
 app.get('/mongo', async (req, res) => {
