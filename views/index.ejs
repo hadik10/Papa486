@@ -1,6 +1,6 @@
 <!-- update our db -->
 
-<h3> Current Drinkz on hand</h3> 
+<h3> List of the Drinks</h3> 
  <% for (var i=0; i< drinkData.length; i++ ) { %>
   <form method="POST" action="/deleteDrink/<%= drinkData[i]._id %>" style="display: inline-block">  
     <%= drinkData[i].drink_name %> (<%= drinkData[i].size %>) 
@@ -8,6 +8,7 @@
   </form>
   <br/>
 <% } %> 
+
 
 <h3> add a new drink </h3>
 
@@ -18,8 +19,17 @@
     <label for="size">size</label>
       <input name="size" value="gallon"> 
     <br>
-    <input type="submit" value="add a drink" />
+    <input type="submit" value="add drink" />
 </form>
+
+<% for (var i=0; i< drinkData.length; i++ ) { %>
+  <form method="POST" action="/updateDrink/<%= drinkData[i]._id %>" style="display: inline-block">  
+    <%= drinkData[i].drink_name %> (<%= drinkData[i].size %>) 
+    <input type="submit" value="update"> 
+  </form>
+  <br/>
+<% } %> 
+
 <!-- 
 <form method="get" action="/update">
     <p>Type anything?</p>
